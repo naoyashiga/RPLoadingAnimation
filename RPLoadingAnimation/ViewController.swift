@@ -13,25 +13,34 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let circle = UIView()
+//        let circle = UIView()
+        let circle = CALayer()
         let radius: CGFloat = 30
         
-        circle.backgroundColor = UIColor.blackColor()
-        circle.layer.cornerRadius = radius / 2
-        circle.clipsToBounds = true
+        circle.backgroundColor = UIColor.blackColor().CGColor
+        circle.cornerRadius = radius / 2
         circle.frame.origin = view.center.offset(dx: -radius / 2, dy: -radius / 2)
         circle.frame.size = CGSize(width: radius, height: radius)
         
-        view.addSubview(circle)
+//        view.addSubview(circle)
         
-        UIView.animateWithDuration(
-            2.0,
-            delay: 0,
-            options: [.Repeat, .Autoreverse],
-            animations: {
-                circle.center.y += 100
-                
-            }, completion: nil)
+        let replicatorLayer = CAReplicatorLayer()
+        replicatorLayer.frame = view.bounds
+        view.layer.addSublayer(replicatorLayer)
+        
+        replicatorLayer.addSublayer(circle)
+        replicatorLayer.instanceCount = 4
+        replicatorLayer.instanceTransform = CATransform3DMakeTranslation(20, 0, 0)
+        
+        
+//        UIView.animateWithDuration(
+//            2.0,
+//            delay: 0,
+//            options: [.Repeat, .Autoreverse],
+//            animations: {
+//                circle.center.y += 100
+//                
+//            }, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
