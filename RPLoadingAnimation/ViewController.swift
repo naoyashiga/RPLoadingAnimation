@@ -34,14 +34,33 @@ class ViewController: UIViewController {
         
         
         let animation = CABasicAnimation(keyPath: "position.y")
-        animation.toValue = view.center.y + 20
+        animation.toValue = view.center.y + 50
         animation.duration = 0.5
         animation.autoreverses = true
         animation.repeatCount = .infinity
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
         circle.addAnimation(animation, forKey: "animation")
         
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
+        scaleAnimation.toValue = 0.8
+        scaleAnimation.duration = 0.5
+        scaleAnimation.autoreverses = true
+        scaleAnimation.repeatCount = .infinity
+        scaleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        circle.addAnimation(scaleAnimation, forKey: "scaleAnimation")
+        
+        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        rotationAnimation.toValue = -2.0 * M_PI
+        rotationAnimation.duration = 6.0
+        rotationAnimation.repeatCount = .infinity
+        rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        replicatorLayer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
+        
         replicatorLayer.instanceDelay = 0.1
+        
+        let angle = (2.0 * M_PI) / Double(replicatorLayer.instanceCount)
+        replicatorLayer.instanceTransform = CATransform3DMakeRotation(CGFloat(angle), 0.0, 0.0, 1.0)
+//        replicatorLayer.instanceAlphaOffset = 0.8
 //        UIView.animateWithDuration(
 //            2.0,
 //            delay: 0,
