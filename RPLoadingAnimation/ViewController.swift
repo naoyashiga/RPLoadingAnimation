@@ -12,7 +12,26 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        let circle = UIView()
+        
+        circle.backgroundColor = UIColor.blackColor()
+        circle.layer.cornerRadius = 5
+        circle.frame.origin = view.center
+        circle.frame.size = CGSize(width: 10, height: 10)
+        
+        view.addSubview(circle)
+        
+        UIView.animateWithDuration(
+            0.5,
+            delay: 0,
+            usingSpringWithDamping: 1,
+            initialSpringVelocity: 0,
+            options: UIViewAnimationOptions.CurveLinear,
+            animations: {
+                circle.center.y += 100
+                
+            }, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
