@@ -15,6 +15,8 @@
 		9A4E99381BCA3EE600736FB3 /* RPLoadingAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99371BCA3EE600736FB3 /* RPLoadingAnimationTests.swift */; };
 		9A4E99431BCA3EE600736FB3 /* RPLoadingAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99421BCA3EE600736FB3 /* RPLoadingAnimationUITests.swift */; };
 		9A4E99541BCA532B00736FB3 /* RotatingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */; settings = {ASSET_TAGS = (); }; };
+		9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */; settings = {ASSET_TAGS = (); }; };
+		9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		9A4E99421BCA3EE600736FB3 /* RPLoadingAnimationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationUITests.swift; sourceTree = "<group>"; };
 		9A4E99441BCA3EE600736FB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingCircle.swift; sourceTree = "<group>"; };
+		9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationView.swift; sourceTree = "<group>"; };
+		9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +103,7 @@
 		9A4E99211BCA3EE600736FB3 /* RPLoadingAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				9A4E99521BCA52BB00736FB3 /* Animation */,
+				9A4E99521BCA52BB00736FB3 /* LodingAnimation */,
 				9A4E99501BCA528A00736FB3 /* AppDelegate */,
 				9A4E99511BCA529A00736FB3 /* Controllers */,
 				9A4E99261BCA3EE600736FB3 /* Main.storyboard */,
@@ -144,12 +148,22 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		9A4E99521BCA52BB00736FB3 /* Animation */ = {
+		9A4E99521BCA52BB00736FB3 /* LodingAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				9A4E995B1BCA5F6800736FB3 /* animations */,
+				9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */,
+				9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */,
+			);
+			name = LodingAnimation;
+			sourceTree = "<group>";
+		};
+		9A4E995B1BCA5F6800736FB3 /* animations */ = {
 			isa = PBXGroup;
 			children = (
 				9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */,
 			);
-			name = Animation;
+			name = animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +300,8 @@
 				9A4E99251BCA3EE600736FB3 /* ViewController.swift in Sources */,
 				9A4E99541BCA532B00736FB3 /* RotatingCircle.swift in Sources */,
 				9A4E99231BCA3EE600736FB3 /* AppDelegate.swift in Sources */,
+				9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */,
+				9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

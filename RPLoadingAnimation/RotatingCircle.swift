@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RotatingCircle {
+class RotatingCircle: RPLoadingAnimationDelegate {
     
     func setup(layer: CALayer, size: CGSize, color: UIColor) {
         

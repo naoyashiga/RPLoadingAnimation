@@ -13,9 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let animation = RotatingCircle()
-        let size = CGSize(width: 30, height: 30)
-        animation.setup(view.layer, size: size, color: UIColor.blackColor())
+        let size = CGSize(width: 50, height: 50)
+        let cellSize = CGSize(width: 100, height: 100)
+        
+        let animationOrigin = view.center
+        let animationFrame = CGRect(origin: animationOrigin, size: cellSize)
+        let animationView = RPLoadingAnimationView(frame: animationFrame, type: RPLoadingAnimationType.RotatingCircle, color: UIColor.blackColor(), size: size)
+        
+        view.addSubview(animationView)
+        animationView.setupAnimation()
     }
 
     override func didReceiveMemoryWarning() {
