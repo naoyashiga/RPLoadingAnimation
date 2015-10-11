@@ -14,20 +14,20 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         let circle = UIView()
+        let radius: CGFloat = 30
         
         circle.backgroundColor = UIColor.blackColor()
-        circle.layer.cornerRadius = 5
-        circle.frame.origin = view.center
-        circle.frame.size = CGSize(width: 10, height: 10)
+        circle.layer.cornerRadius = radius / 2
+        circle.clipsToBounds = true
+        circle.frame.origin = view.center.offset(dx: -radius / 2, dy: -radius / 2)
+        circle.frame.size = CGSize(width: radius, height: radius)
         
         view.addSubview(circle)
         
         UIView.animateWithDuration(
-            0.5,
+            2.0,
             delay: 0,
-            usingSpringWithDamping: 1,
-            initialSpringVelocity: 0,
-            options: UIViewAnimationOptions.CurveLinear,
+            options: [.Repeat, .Autoreverse],
             animations: {
                 circle.center.y += 100
                 
@@ -38,7 +38,13 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 
+extension CGPoint {
+    public mutating func offset(dx dx: CGFloat, dy: CGFloat) -> CGPoint {
+        x += dx
+        y += dy
+        
+        return self
+    }
+}
