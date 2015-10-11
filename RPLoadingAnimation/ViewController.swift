@@ -33,6 +33,15 @@ class ViewController: UIViewController {
         replicatorLayer.instanceTransform = CATransform3DMakeTranslation(20, 0, 0)
         
         
+        let animation = CABasicAnimation(keyPath: "position.y")
+        animation.toValue = view.center.y + 20
+        animation.duration = 0.5
+        animation.autoreverses = true
+        animation.repeatCount = .infinity
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        circle.addAnimation(animation, forKey: "animation")
+        
+        replicatorLayer.instanceDelay = 0.1
 //        UIView.animateWithDuration(
 //            2.0,
 //            delay: 0,
