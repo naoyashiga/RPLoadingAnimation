@@ -11,10 +11,11 @@ import UIKit
 class SpininngCircle: RPLoadingAnimationDelegate {
     
     func setup(layer: CALayer, size: CGSize, color: UIColor) {
+        let radius = size.width
         
         let circle = CALayer()
         let frame = CGRect(
-            x: (layer.bounds.width - size.width) / 2,
+            x: (layer.bounds.width - size.width) / 2 + radius,
             y: (layer.bounds.height - size.height) / 2,
             width: size.width,
             height: size.height
