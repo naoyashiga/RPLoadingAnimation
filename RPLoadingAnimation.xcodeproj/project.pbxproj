@@ -17,6 +17,7 @@
 		9A4E99541BCA532B00736FB3 /* RotatingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */; settings = {ASSET_TAGS = (); }; };
 		9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */; settings = {ASSET_TAGS = (); }; };
 		9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		9AE4EB601BCB3FCC005BD9D9 /* SpininngCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB5F1BCB3FCC005BD9D9 /* SpininngCircle.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingCircle.swift; sourceTree = "<group>"; };
 		9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationView.swift; sourceTree = "<group>"; };
 		9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationDelegate.swift; sourceTree = "<group>"; };
+		9AE4EB5F1BCB3FCC005BD9D9 /* SpininngCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpininngCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */,
+				9AE4EB5F1BCB3FCC005BD9D9 /* SpininngCircle.swift */,
 			);
 			name = animations;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				9A4E99231BCA3EE600736FB3 /* AppDelegate.swift in Sources */,
 				9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */,
 				9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */,
+				9AE4EB601BCB3FCC005BD9D9 /* SpininngCircle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +448,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RPLoadingAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.RPLoadingAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,6 +463,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = RPLoadingAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.RPLoadingAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -532,6 +538,7 @@
 				9A4E99491BCA3EE700736FB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A4E994A1BCA3EE700736FB3 /* Build configuration list for PBXNativeTarget "RPLoadingAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +547,7 @@
 				9A4E994C1BCA3EE700736FB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A4E994D1BCA3EE700736FB3 /* Build configuration list for PBXNativeTarget "RPLoadingAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +556,7 @@
 				9A4E994F1BCA3EE700736FB3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,13 +9,7 @@
 import UIKit
 
 public enum RPLoadingAnimationType {
-    case RotatingCircle
-//    private func animation() -> RPLoadingAnimationDelegate {
-//        switch self {
-//        case .RotatingCircle:
-//            return RotatingCircle()
-//        }
-//    }
+    case RotatingCircle, SpininngCircle
 }
 
 class AnimationFactory {
@@ -23,6 +17,8 @@ class AnimationFactory {
         switch type {
         case .RotatingCircle:
             return RotatingCircle()
+        case .SpininngCircle:
+            return SpininngCircle()
         }
     }
 }
