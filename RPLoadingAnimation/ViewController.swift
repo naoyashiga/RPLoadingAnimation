@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         let animationOrigin = view.center.offset(dx: -cellSize.width / 2, dy: -cellSize.height / 2)
         let animationFrame = CGRect(origin: animationOrigin, size: cellSize)
-        let animationView = RPLoadingAnimationView(frame: animationFrame, type: RPLoadingAnimationType.SpininngDot, color: UIColor.blackColor(), size: cellSize)
+        let animationView = RPLoadingAnimationView(frame: animationFrame, type: RPLoadingAnimationType.DotSpinningLikeSkype, color: UIColor.blackColor(), size: cellSize)
         
         view.addSubview(animationView)
         animationView.setupAnimation()

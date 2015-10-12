@@ -9,7 +9,8 @@
 import UIKit
 
 public enum RPLoadingAnimationType {
-    case RotatingCircle, SpininngDot, LineScale, DotTrianglePath
+    case RotatingCircle, SpininngDot, LineScale, DotTrianglePath,
+    DotSpinningLikeSkype
 }
 
 class AnimationFactory {
@@ -23,6 +24,8 @@ class AnimationFactory {
             return LineScale()
         case .DotTrianglePath:
             return DotTrianglePath()
+        case .DotSpinningLikeSkype:
+            return DotSpinningLikeSkype()
         }
     }
 }

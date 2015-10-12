@@ -21,6 +21,7 @@
 		9AE4EB621BCB6760005BD9D9 /* LineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB611BCB6760005BD9D9 /* LineScale.swift */; settings = {ASSET_TAGS = (); }; };
 		9AE4EB651BCBA90A005BD9D9 /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */; settings = {ASSET_TAGS = (); }; };
 		9AE4EB671BCBAD67005BD9D9 /* DotTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB661BCBAD67005BD9D9 /* DotTrianglePath.swift */; settings = {ASSET_TAGS = (); }; };
+		9AE4EB691BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB681BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		9AE4EB611BCB6760005BD9D9 /* LineScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineScale.swift; sourceTree = "<group>"; };
 		9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingFunction.swift; sourceTree = "<group>"; };
 		9AE4EB661BCBAD67005BD9D9 /* DotTrianglePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotTrianglePath.swift; sourceTree = "<group>"; };
+		9AE4EB681BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotSpinningLikeSkype.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				9AE4EB5F1BCB3FCC005BD9D9 /* SpininngDot.swift */,
 				9AE4EB611BCB6760005BD9D9 /* LineScale.swift */,
 				9AE4EB661BCBAD67005BD9D9 /* DotTrianglePath.swift */,
+				9AE4EB681BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift */,
 			);
 			name = animations;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AE4EB671BCBAD67005BD9D9 /* DotTrianglePath.swift in Sources */,
+				9AE4EB691BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift in Sources */,
 				9A4E99251BCA3EE600736FB3 /* ViewController.swift in Sources */,
 				9A4E99541BCA532B00736FB3 /* RotatingCircle.swift in Sources */,
 				9AE4EB621BCB6760005BD9D9 /* LineScale.swift in Sources */,
