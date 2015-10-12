@@ -12,56 +12,39 @@ class LineScale: RPLoadingAnimationDelegate {
     
     func setup(layer: CALayer, size: CGSize, color: UIColor) {
         
-        let circle = CALayer()
+        let lineNum: CGFloat = 4
+        let lineWidth: CGFloat = size.width / 5
+        let line = CALayer()
+        
         let frame = CGRect(
-            x: (layer.bounds.width - size.width) / 2,
-            y: (layer.bounds.height - size.height) / 2,
-            width: size.width,
+            x: (layer.bounds.width - lineWidth) / 2 - lineWidth * lineNum / 2,
+            y: (layer.bounds.height - lineWidth) / 2,
+            width: lineWidth,
             height: size.height
         )
         
-        circle.backgroundColor = color.CGColor
-        circle.frame = frame
+        line.backgroundColor = color.CGColor
+        line.frame = frame
+        line.cornerRadius = lineWidth / 2
         
         let replicatorLayer = CAReplicatorLayer()
+        
         replicatorLayer.frame = layer.bounds
+        replicatorLayer.addSublayer(line)
+        
+        replicatorLayer.instanceCount = Int(lineNum)
+        replicatorLayer.instanceTransform = CATransform3DMakeTranslation(lineWidth + 10, 0, 0)
+        replicatorLayer.instanceDelay = 0.15
+        
         layer.addSublayer(replicatorLayer)
         
-        let a = CATransform3DMakeTranslation(20, 0, 0)
-        let b = CATransform3DMakeScale(1, 1.5, 0)
-        
-        replicatorLayer.addSublayer(circle)
-        replicatorLayer.instanceCount = 4
-//        replicatorLayer.instanceTransform = CATransform3DMakeTranslation(20, 0, 0)
-        replicatorLayer.instanceTransform = CATransform3DConcat(a, b)
-        
-        let animation = CABasicAnimation(keyPath: "position.y")
-        animation.toValue = frame.origin.y + 50
-        animation.duration = 0.5
-        animation.autoreverses = true
-        animation.repeatCount = .infinity
-        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        circle.addAnimation(animation, forKey: "animation")
-        
-        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
-        scaleAnimation.toValue = 0.8
-        scaleAnimation.duration = 0.5
+        let scaleAnimation = CABasicAnimation(keyPath: "transform.scale.y")
+        scaleAnimation.toValue = 0.3
+        scaleAnimation.duration = 0.6
         scaleAnimation.autoreverses = true
         scaleAnimation.repeatCount = .infinity
         scaleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        circle.addAnimation(scaleAnimation, forKey: "scaleAnimation")
-        
-        let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
-        rotationAnimation.toValue = -2.0 * M_PI
-        rotationAnimation.duration = 6.0
-        rotationAnimation.repeatCount = .infinity
-        rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-//        replicatorLayer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
-        
-        replicatorLayer.instanceDelay = 0.1
-        
-//        let angle = (2.0 * M_PI) / Double(replicatorLayer.instanceCount)
-//        replicatorLayer.instanceTransform = CATransform3DMakeRotation(CGFloat(angle), 0.0, 0.0, 1.0)
+        line.addAnimation(scaleAnimation, forKey: "scaleAnimation")
     }
 }
 

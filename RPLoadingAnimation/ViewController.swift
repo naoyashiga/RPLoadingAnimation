@@ -13,12 +13,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let size = CGSize(width: 30, height: 30)
         let cellSize = CGSize(width: 100, height: 100)
         
         let animationOrigin = view.center.offset(dx: -cellSize.width / 2, dy: -cellSize.height)
         let animationFrame = CGRect(origin: animationOrigin, size: cellSize)
-        let animationView = RPLoadingAnimationView(frame: animationFrame, type: RPLoadingAnimationType.SpininngCircle, color: UIColor.blackColor(), size: size)
+        let animationView = RPLoadingAnimationView(frame: animationFrame, type: RPLoadingAnimationType.LineScale, color: UIColor.blackColor(), size: cellSize)
         
         view.addSubview(animationView)
         animationView.setupAnimation()
