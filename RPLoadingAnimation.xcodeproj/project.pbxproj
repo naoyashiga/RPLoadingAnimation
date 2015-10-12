@@ -17,7 +17,7 @@
 		9A4E99541BCA532B00736FB3 /* RotatingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */; settings = {ASSET_TAGS = (); }; };
 		9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */; settings = {ASSET_TAGS = (); }; };
 		9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		9AE4EB601BCB3FCC005BD9D9 /* SpininngCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB5F1BCB3FCC005BD9D9 /* SpininngCircle.swift */; settings = {ASSET_TAGS = (); }; };
+		9AE4EB601BCB3FCC005BD9D9 /* SpininngDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB5F1BCB3FCC005BD9D9 /* SpininngDot.swift */; settings = {ASSET_TAGS = (); }; };
 		9AE4EB621BCB6760005BD9D9 /* LineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB611BCB6760005BD9D9 /* LineScale.swift */; settings = {ASSET_TAGS = (); }; };
 		9AE4EB651BCBA90A005BD9D9 /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */; settings = {ASSET_TAGS = (); }; };
 		9AE4EB671BCBAD67005BD9D9 /* DotTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB661BCBAD67005BD9D9 /* DotTrianglePath.swift */; settings = {ASSET_TAGS = (); }; };
@@ -57,7 +57,7 @@
 		9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingCircle.swift; sourceTree = "<group>"; };
 		9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationView.swift; sourceTree = "<group>"; };
 		9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationDelegate.swift; sourceTree = "<group>"; };
-		9AE4EB5F1BCB3FCC005BD9D9 /* SpininngCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpininngCircle.swift; sourceTree = "<group>"; };
+		9AE4EB5F1BCB3FCC005BD9D9 /* SpininngDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpininngDot.swift; sourceTree = "<group>"; };
 		9AE4EB611BCB6760005BD9D9 /* LineScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineScale.swift; sourceTree = "<group>"; };
 		9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingFunction.swift; sourceTree = "<group>"; };
 		9AE4EB661BCBAD67005BD9D9 /* DotTrianglePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotTrianglePath.swift; sourceTree = "<group>"; };
@@ -171,7 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */,
-				9AE4EB5F1BCB3FCC005BD9D9 /* SpininngCircle.swift */,
+				9AE4EB5F1BCB3FCC005BD9D9 /* SpininngDot.swift */,
 				9AE4EB611BCB6760005BD9D9 /* LineScale.swift */,
 				9AE4EB661BCBAD67005BD9D9 /* DotTrianglePath.swift */,
 			);
@@ -325,7 +325,7 @@
 				9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */,
 				9AE4EB651BCBA90A005BD9D9 /* TimingFunction.swift in Sources */,
 				9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */,
-				9AE4EB601BCB3FCC005BD9D9 /* SpininngCircle.swift in Sources */,
+				9AE4EB601BCB3FCC005BD9D9 /* SpininngDot.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

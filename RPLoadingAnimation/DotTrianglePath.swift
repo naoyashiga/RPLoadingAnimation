@@ -39,10 +39,6 @@ class DotTrianglePath: RPLoadingAnimationDelegate {
         replicatorLayer.addSublayer(dot)
         
         replicatorLayer.instanceCount = Int(dotNum)
-//        replicatorLayer.instanceTransform = CATransform3DMakeTranslation(diameter + 10, 0, 0)
-//        let angle = (2.0 * M_PI) / Double(replicatorLayer.instanceCount)
-        
-//        replicatorLayer.instanceTransform = CATransform3DMakeRotation(CGFloat(angle), 0.0, 0.0, 1.0)
         replicatorLayer.instanceDelay = CFTimeInterval(-1 / dotNum)
         
         layer.addSublayer(replicatorLayer)
