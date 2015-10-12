@@ -19,6 +19,7 @@
 		9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */; settings = {ASSET_TAGS = (); }; };
 		9AE4EB601BCB3FCC005BD9D9 /* SpininngCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB5F1BCB3FCC005BD9D9 /* SpininngCircle.swift */; settings = {ASSET_TAGS = (); }; };
 		9AE4EB621BCB6760005BD9D9 /* LineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB611BCB6760005BD9D9 /* LineScale.swift */; settings = {ASSET_TAGS = (); }; };
+		9AE4EB651BCBA90A005BD9D9 /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationDelegate.swift; sourceTree = "<group>"; };
 		9AE4EB5F1BCB3FCC005BD9D9 /* SpininngCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpininngCircle.swift; sourceTree = "<group>"; };
 		9AE4EB611BCB6760005BD9D9 /* LineScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineScale.swift; sourceTree = "<group>"; };
+		9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 		9A4E99521BCA52BB00736FB3 /* LodingAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				9AE4EB631BCBA8F2005BD9D9 /* TimingFunction */,
 				9A4E995B1BCA5F6800736FB3 /* animations */,
 				9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */,
 				9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */,
@@ -170,6 +173,14 @@
 				9AE4EB611BCB6760005BD9D9 /* LineScale.swift */,
 			);
 			name = animations;
+			sourceTree = "<group>";
+		};
+		9AE4EB631BCBA8F2005BD9D9 /* TimingFunction */ = {
+			isa = PBXGroup;
+			children = (
+				9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */,
+			);
+			name = TimingFunction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 				9AE4EB621BCB6760005BD9D9 /* LineScale.swift in Sources */,
 				9A4E99231BCA3EE600736FB3 /* AppDelegate.swift in Sources */,
 				9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */,
+				9AE4EB651BCBA90A005BD9D9 /* TimingFunction.swift in Sources */,
 				9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */,
 				9AE4EB601BCB3FCC005BD9D9 /* SpininngCircle.swift in Sources */,
 			);

@@ -43,8 +43,7 @@ class LineScale: RPLoadingAnimationDelegate {
         scaleAnimation.duration = 0.6
         scaleAnimation.autoreverses = true
         scaleAnimation.repeatCount = .infinity
-        scaleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+        scaleAnimation.timingFunction = TimingFunction.EaseInOutCubic.getTimingFunction()
         line.addAnimation(scaleAnimation, forKey: "scaleAnimation")
     }
 }
-
