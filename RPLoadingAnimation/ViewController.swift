@@ -15,9 +15,9 @@ class ViewController: UIViewController {
         
         let cellSize = CGSize(width: 100, height: 100)
         
-        let animationOrigin = view.center.offset(dx: -cellSize.width / 2, dy: -cellSize.height)
+        let animationOrigin = view.center.offset(dx: -cellSize.width / 2, dy: -cellSize.height / 2)
         let animationFrame = CGRect(origin: animationOrigin, size: cellSize)
-        let animationView = RPLoadingAnimationView(frame: animationFrame, type: RPLoadingAnimationType.LineScale, color: UIColor.blackColor(), size: cellSize)
+        let animationView = RPLoadingAnimationView(frame: animationFrame, type: RPLoadingAnimationType.DotTrianglePath, color: UIColor.blackColor(), size: cellSize)
         
         view.addSubview(animationView)
         animationView.setupAnimation()
