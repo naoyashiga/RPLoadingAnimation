@@ -12,16 +12,19 @@ class RotatingCircle: RPLoadingAnimationDelegate {
     
     func setup(layer: CALayer, size: CGSize, color: UIColor) {
         
+        let dotNum: CGFloat = 4
+        let diameter: CGFloat = size.width / 10
+        
         let circle = CALayer()
         let frame = CGRect(
-            x: (layer.bounds.width - size.width) / 2,
-            y: (layer.bounds.height - size.height) / 2,
-            width: size.width,
-            height: size.height
+            x: (layer.bounds.width - diameter) / 2,
+            y: (layer.bounds.height - diameter) / 2,
+            width: diameter,
+            height: diameter
         )
         
         circle.backgroundColor = color.CGColor
-        circle.cornerRadius = size.width / 2
+        circle.cornerRadius = diameter / 2
         circle.frame = frame
         
         let replicatorLayer = CAReplicatorLayer()
@@ -29,7 +32,7 @@ class RotatingCircle: RPLoadingAnimationDelegate {
         layer.addSublayer(replicatorLayer)
         
         replicatorLayer.addSublayer(circle)
-        replicatorLayer.instanceCount = 4
+        replicatorLayer.instanceCount = Int(dotNum)
         replicatorLayer.instanceTransform = CATransform3DMakeTranslation(20, 0, 0)
         
         let animation = CABasicAnimation(keyPath: "position.y")

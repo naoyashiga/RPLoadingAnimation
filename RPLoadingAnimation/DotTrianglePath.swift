@@ -15,9 +15,9 @@ class DotTrianglePath: RPLoadingAnimationDelegate {
     func setup(layer: CALayer, size: CGSize, color: UIColor) {
         
         let dotNum: CGFloat = 3
-        let diameter: CGFloat = size.width / 5
+        let diameter: CGFloat = size.width / 15
         let dot = CALayer()
-        let duration: CFTimeInterval = 1.5
+        let duration: CFTimeInterval = 1.3
         
         let frame = CGRect(
             x: (layer.bounds.width - diameter) / 2,
@@ -26,6 +26,7 @@ class DotTrianglePath: RPLoadingAnimationDelegate {
             height: diameter
         )
         
+        layer.frame = frame
         baseLayer = layer
         baseSize = size
         
@@ -52,7 +53,7 @@ class DotTrianglePath: RPLoadingAnimationDelegate {
     }
     
     func getPath() -> CGPath {
-        let r: CGFloat = baseSize.width / 2
+        let r: CGFloat = baseSize.width / 5
         let center = CGPoint(x: baseLayer.bounds.width / 2, y: baseLayer.bounds.height / 2)
         let path = UIBezierPath()
         

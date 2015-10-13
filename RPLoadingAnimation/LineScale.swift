@@ -13,19 +13,20 @@ class LineScale: RPLoadingAnimationDelegate {
     func setup(layer: CALayer, size: CGSize, color: UIColor) {
         
         let lineNum: CGFloat = 4
-        let lineWidth: CGFloat = size.width / 5
+        let lineSize: CGSize = CGSize(width: size.width / 10, height: size.height / 2.5)
         let line = CALayer()
+        let duration: CFTimeInterval = 0.6
         
         let frame = CGRect(
-            x: (layer.bounds.width - lineWidth) / 2 - lineWidth * lineNum / 2,
-            y: (layer.bounds.height - lineWidth) / 2,
-            width: lineWidth,
-            height: size.height
+            x: (layer.bounds.width - lineSize.width) / 2 - lineSize.width * lineNum / 2,
+            y: (layer.bounds.height - lineSize.height) / 2,
+            width: lineSize.width,
+            height: lineSize.height
         )
         
         line.backgroundColor = color.CGColor
         line.frame = frame
-        line.cornerRadius = lineWidth / 2
+        line.cornerRadius = lineSize.width / 2
         
         let replicatorLayer = CAReplicatorLayer()
         
@@ -33,14 +34,14 @@ class LineScale: RPLoadingAnimationDelegate {
         replicatorLayer.addSublayer(line)
         
         replicatorLayer.instanceCount = Int(lineNum)
-        replicatorLayer.instanceTransform = CATransform3DMakeTranslation(lineWidth + 10, 0, 0)
+        replicatorLayer.instanceTransform = CATransform3DMakeTranslation(lineSize.width + 10, 0, 0)
         replicatorLayer.instanceDelay = 0.15
         
         layer.addSublayer(replicatorLayer)
         
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale.y")
         scaleAnimation.toValue = 0.3
-        scaleAnimation.duration = 0.6
+        scaleAnimation.duration = duration
         scaleAnimation.autoreverses = true
         scaleAnimation.repeatCount = .infinity
         scaleAnimation.timingFunction = TimingFunction.EaseInOutCubic.getTimingFunction()

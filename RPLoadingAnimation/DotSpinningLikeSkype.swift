@@ -15,7 +15,7 @@ class DotSpinningLikeSkype: RPLoadingAnimationDelegate {
     func setup(layer: CALayer, size: CGSize, color: UIColor) {
         
         let dotNum: CGFloat = 10
-        let diameter: CGFloat = size.width / 3
+        let diameter: CGFloat = size.width / 10
         let duration: CFTimeInterval = 2.5
         
         let dot = CALayer()

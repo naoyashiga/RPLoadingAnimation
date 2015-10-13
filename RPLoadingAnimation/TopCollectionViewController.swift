@@ -17,6 +17,14 @@ class TopCollectionViewController: UICollectionViewController, UICollectionViewD
     private var cellWidth:CGFloat = 0.0
     private var cellHeight:CGFloat = 0.0
     
+    var animationTypes: [RPLoadingAnimationType] = [
+        .RotatingCircle,
+        .SpininngDot,
+        .LineScale,
+        .DotTrianglePath,
+        .DotSpinningLikeSkype
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,28 +45,21 @@ class TopCollectionViewController: UICollectionViewController, UICollectionViewD
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return animationTypes.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(TopCollectionReuseId.cell, forIndexPath: indexPath) as! TopCollectionViewCell
         
         let cellSize = cell.bounds.size
-        
-//        let animationOrigin = cell.center.offset(dx: -cellSize.width / 2, dy: -cellSize.height / 2)
-//        let animationFrame = CGRect(origin: animationOrigin, size: cellSize)
-//        let animationFrame = CGRect(origin: cell.center, size: cellSize)
         let animationFrame = CGRect(origin: CGPointZero, size: cellSize)
         
         let animationView = RPLoadingAnimationView(
             frame: animationFrame,
-            type: RPLoadingAnimationType.SpininngDot,
+            type: animationTypes[indexPath.row],
             color: UIColor.blackColor(),
             size: cellSize
         )
-//        let animationView = UIView()
-//        animationView.frame = animationFrame
-//        animationView.backgroundColor = UIColor.yellowColor()
         
         cell.addSubview(animationView)
         animationView.setupAnimation()
