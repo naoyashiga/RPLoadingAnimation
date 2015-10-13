@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		9A4E99231BCA3EE600736FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99221BCA3EE600736FB3 /* AppDelegate.swift */; };
-		9A4E99251BCA3EE600736FB3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99241BCA3EE600736FB3 /* ViewController.swift */; };
 		9A4E99281BCA3EE600736FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E99261BCA3EE600736FB3 /* Main.storyboard */; };
 		9A4E992A1BCA3EE600736FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E99291BCA3EE600736FB3 /* Assets.xcassets */; };
 		9A4E992D1BCA3EE600736FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E992B1BCA3EE600736FB3 /* LaunchScreen.storyboard */; };
@@ -17,6 +16,10 @@
 		9A4E99541BCA532B00736FB3 /* RotatingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */; settings = {ASSET_TAGS = (); }; };
 		9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */; settings = {ASSET_TAGS = (); }; };
 		9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		9ABB20731BCD2ABA002D42A6 /* TopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB20721BCD2ABA002D42A6 /* TopCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		9ABB20771BCD2B10002D42A6 /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB20751BCD2B10002D42A6 /* TopCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		9ABB20781BCD2B10002D42A6 /* TopCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ABB20761BCD2B10002D42A6 /* TopCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
+		9ABB207B1BCD2BA6002D42A6 /* UICollectionView+RPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB207A1BCD2BA6002D42A6 /* UICollectionView+RPExtension.swift */; settings = {ASSET_TAGS = (); }; };
 		9AE4EB601BCB3FCC005BD9D9 /* SpininngDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB5F1BCB3FCC005BD9D9 /* SpininngDot.swift */; settings = {ASSET_TAGS = (); }; };
 		9AE4EB621BCB6760005BD9D9 /* LineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB611BCB6760005BD9D9 /* LineScale.swift */; settings = {ASSET_TAGS = (); }; };
 		9AE4EB651BCBA90A005BD9D9 /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */; settings = {ASSET_TAGS = (); }; };
@@ -44,7 +47,6 @@
 /* Begin PBXFileReference section */
 		9A4E991F1BCA3EE600736FB3 /* RPLoadingAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPLoadingAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4E99221BCA3EE600736FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9A4E99241BCA3EE600736FB3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9A4E99271BCA3EE600736FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9A4E99291BCA3EE600736FB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A4E992C1BCA3EE600736FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +60,10 @@
 		9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatingCircle.swift; sourceTree = "<group>"; };
 		9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationView.swift; sourceTree = "<group>"; };
 		9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RPLoadingAnimationDelegate.swift; sourceTree = "<group>"; };
+		9ABB20721BCD2ABA002D42A6 /* TopCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCollectionViewController.swift; sourceTree = "<group>"; };
+		9ABB20751BCD2B10002D42A6 /* TopCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopCollectionViewCell.swift; sourceTree = "<group>"; };
+		9ABB20761BCD2B10002D42A6 /* TopCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TopCollectionViewCell.xib; sourceTree = "<group>"; };
+		9ABB207A1BCD2BA6002D42A6 /* UICollectionView+RPExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RPExtension.swift"; sourceTree = "<group>"; };
 		9AE4EB5F1BCB3FCC005BD9D9 /* SpininngDot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpininngDot.swift; sourceTree = "<group>"; };
 		9AE4EB611BCB6760005BD9D9 /* LineScale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineScale.swift; sourceTree = "<group>"; };
 		9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimingFunction.swift; sourceTree = "<group>"; };
@@ -116,6 +122,8 @@
 				9A4E99521BCA52BB00736FB3 /* LodingAnimation */,
 				9A4E99501BCA528A00736FB3 /* AppDelegate */,
 				9A4E99511BCA529A00736FB3 /* Controllers */,
+				9ABB20741BCD2ADE002D42A6 /* View */,
+				9ABB20791BCD2B8C002D42A6 /* Extension */,
 				9A4E99261BCA3EE600736FB3 /* Main.storyboard */,
 				9A4E99291BCA3EE600736FB3 /* Assets.xcassets */,
 				9A4E992B1BCA3EE600736FB3 /* LaunchScreen.storyboard */,
@@ -153,7 +161,7 @@
 		9A4E99511BCA529A00736FB3 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				9A4E99241BCA3EE600736FB3 /* ViewController.swift */,
+				9ABB20721BCD2ABA002D42A6 /* TopCollectionViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +187,23 @@
 				9AE4EB681BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift */,
 			);
 			name = animations;
+			sourceTree = "<group>";
+		};
+		9ABB20741BCD2ADE002D42A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9ABB20751BCD2B10002D42A6 /* TopCollectionViewCell.swift */,
+				9ABB20761BCD2B10002D42A6 /* TopCollectionViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9ABB20791BCD2B8C002D42A6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				9ABB207A1BCD2BA6002D42A6 /* UICollectionView+RPExtension.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		9AE4EB631BCBA8F2005BD9D9 /* TimingFunction */ = {
@@ -293,6 +318,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ABB20781BCD2B10002D42A6 /* TopCollectionViewCell.xib in Resources */,
 				9A4E992D1BCA3EE600736FB3 /* LaunchScreen.storyboard in Resources */,
 				9A4E992A1BCA3EE600736FB3 /* Assets.xcassets in Resources */,
 				9A4E99281BCA3EE600736FB3 /* Main.storyboard in Resources */,
@@ -320,11 +346,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ABB20771BCD2B10002D42A6 /* TopCollectionViewCell.swift in Sources */,
+				9ABB207B1BCD2BA6002D42A6 /* UICollectionView+RPExtension.swift in Sources */,
 				9AE4EB671BCBAD67005BD9D9 /* DotTrianglePath.swift in Sources */,
 				9AE4EB691BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift in Sources */,
-				9A4E99251BCA3EE600736FB3 /* ViewController.swift in Sources */,
 				9A4E99541BCA532B00736FB3 /* RotatingCircle.swift in Sources */,
 				9AE4EB621BCB6760005BD9D9 /* LineScale.swift in Sources */,
+				9ABB20731BCD2ABA002D42A6 /* TopCollectionViewController.swift in Sources */,
 				9A4E99231BCA3EE600736FB3 /* AppDelegate.swift in Sources */,
 				9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */,
 				9AE4EB651BCBA90A005BD9D9 /* TimingFunction.swift in Sources */,
