@@ -22,7 +22,8 @@ class TopCollectionViewController: UICollectionViewController, UICollectionViewD
         .SpininngDot,
         .LineScale,
         .DotTrianglePath,
-        .DotSpinningLikeSkype
+        .DotSpinningLikeSkype,
+        .FunnyDotsA
     ]
     
     override func viewDidLoad() {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1F29DC1BCE8BE900CFDB72 /* FunnyDotsA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F29DB1BCE8BE900CFDB72 /* FunnyDotsA.swift */; settings = {ASSET_TAGS = (); }; };
 		9A4E99231BCA3EE600736FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99221BCA3EE600736FB3 /* AppDelegate.swift */; };
 		9A4E99281BCA3EE600736FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E99261BCA3EE600736FB3 /* Main.storyboard */; };
 		9A4E992A1BCA3EE600736FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E99291BCA3EE600736FB3 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A1F29DB1BCE8BE900CFDB72 /* FunnyDotsA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunnyDotsA.swift; sourceTree = "<group>"; };
 		9A4E991F1BCA3EE600736FB3 /* RPLoadingAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPLoadingAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4E99221BCA3EE600736FB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A4E99271BCA3EE600736FB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				9AE4EB611BCB6760005BD9D9 /* LineScale.swift */,
 				9AE4EB661BCBAD67005BD9D9 /* DotTrianglePath.swift */,
 				9AE4EB681BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift */,
+				9A1F29DB1BCE8BE900CFDB72 /* FunnyDotsA.swift */,
 			);
 			name = animations;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				9ABB207B1BCD2BA6002D42A6 /* UICollectionView+RPExtension.swift in Sources */,
 				9AE4EB671BCBAD67005BD9D9 /* DotTrianglePath.swift in Sources */,
 				9AE4EB691BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift in Sources */,
+				9A1F29DC1BCE8BE900CFDB72 /* FunnyDotsA.swift in Sources */,
 				9A4E99541BCA532B00736FB3 /* RotatingCircle.swift in Sources */,
 				9AE4EB621BCB6760005BD9D9 /* LineScale.swift in Sources */,
 				9ABB20731BCD2ABA002D42A6 /* TopCollectionViewController.swift in Sources */,
