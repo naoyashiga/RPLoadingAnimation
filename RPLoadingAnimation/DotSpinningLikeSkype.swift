@@ -80,7 +80,7 @@ class DotSpinningLikeSkype: RPLoadingAnimationDelegate {
             
             let colorAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
             colorAnimation.values = cgColors
-            colorAnimation.duration = 4
+            colorAnimation.duration = 3
             colorAnimation.repeatCount = .infinity
             colorAnimation.autoreverses = true
             dot.add(colorAnimation, forKey: "colorAnimation")

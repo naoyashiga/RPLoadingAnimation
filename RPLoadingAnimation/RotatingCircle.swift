@@ -68,7 +68,7 @@ class RotatingCircle: RPLoadingAnimationDelegate {
             
             let colorAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
             colorAnimation.values = cgColors
-            colorAnimation.duration = 3
+            colorAnimation.duration = 2
             colorAnimation.repeatCount = .infinity
             colorAnimation.autoreverses = true
             circle.add(colorAnimation, forKey: "colorAnimation")

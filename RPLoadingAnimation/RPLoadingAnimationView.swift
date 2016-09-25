@@ -34,7 +34,7 @@ class AnimationFactory {
 
 open class RPLoadingAnimationView: UIView {
     fileprivate static let defaultType = RPLoadingAnimationType.rotatingCircle
-    fileprivate static let defaultColors = [UIColor.black, .white , .red, .yellow]
+    fileprivate static let defaultColors = [UIColor.black]
     fileprivate static let defaultSize = CGSize(width: 40, height: 40)
     
     fileprivate var type: RPLoadingAnimationType

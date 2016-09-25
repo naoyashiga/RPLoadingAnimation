@@ -56,7 +56,7 @@ class LineScale: RPLoadingAnimationDelegate {
             
             let colorAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
             colorAnimation.values = cgColors
-            colorAnimation.duration = 6
+            colorAnimation.duration = 2
             colorAnimation.repeatCount = .infinity
             colorAnimation.autoreverses = true
             line.add(colorAnimation, forKey: "colorAnimation")

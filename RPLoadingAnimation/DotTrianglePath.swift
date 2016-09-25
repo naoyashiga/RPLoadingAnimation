@@ -60,7 +60,7 @@ class DotTrianglePath: RPLoadingAnimationDelegate {
             
             let colorAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
             colorAnimation.values = cgColors
-            colorAnimation.duration = 5
+            colorAnimation.duration = 2
             colorAnimation.repeatCount = .infinity
             colorAnimation.autoreverses = true
             dot.add(colorAnimation, forKey: "colorAnimation")
