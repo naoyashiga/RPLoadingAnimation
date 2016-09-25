@@ -12,7 +12,7 @@ class FunnyDotsA: RPLoadingAnimationDelegate {
     var baseLayer = CALayer()
     var baseSize = CGSize(width: 0, height: 0)
     
-    func setup(layer: CALayer, size: CGSize, color: UIColor) {
+    func setup(_ layer: CALayer, size: CGSize, colors: [UIColor]) {
         
         let dotNum: CGFloat = 7
         let diameter: CGFloat = size.width / 15
@@ -29,7 +29,7 @@ class FunnyDotsA: RPLoadingAnimationDelegate {
         baseLayer = layer
         baseSize = size
         
-        dot.backgroundColor = color.CGColor
+        dot.backgroundColor = colors[0].cgColor
         dot.cornerRadius = diameter / 2
         dot.frame = frame
         
@@ -49,31 +49,51 @@ class FunnyDotsA: RPLoadingAnimationDelegate {
         positionYAnimation.duration = duration / 3
         positionYAnimation.autoreverses = true
         positionYAnimation.repeatCount = .infinity
-        positionYAnimation.timingFunction = TimingFunction.EaseInOut.getTimingFunction()
-        dot.addAnimation(positionYAnimation, forKey: "positionYAnimation")
+        positionYAnimation.timingFunction = TimingFunction.easeInOut.getTimingFunction()
+        dot.add(positionYAnimation, forKey: "positionYAnimation")
         
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         scaleAnimation.toValue = 0.5
         scaleAnimation.duration = duration
         scaleAnimation.autoreverses = true
         scaleAnimation.repeatCount = .infinity
-        scaleAnimation.timingFunction = TimingFunction.EaseInBack.getTimingFunction()
-        dot.addAnimation(scaleAnimation, forKey: "scaleAnimation")
+        scaleAnimation.timingFunction = TimingFunction.easeInBack.getTimingFunction()
+        dot.add(scaleAnimation, forKey: "scaleAnimation")
         
         let moveAnimation = CAKeyframeAnimation(keyPath: "position")
         moveAnimation.beginTime = 1.0
         moveAnimation.path = getPath()
         moveAnimation.duration = duration
         moveAnimation.repeatCount = .infinity
-        moveAnimation.timingFunction = TimingFunction.EaseInOut.getTimingFunction()
-        dot.addAnimation(moveAnimation, forKey: "moveAnimation")
+        moveAnimation.timingFunction = TimingFunction.easeInOut.getTimingFunction()
+        dot.add(moveAnimation, forKey: "moveAnimation")
+        
+        
+        
+        if colors.count > 1 {
+            
+            var cgColors : [CGColor] = []
+            for color in colors {
+                cgColors.append(color.cgColor)
+            }
+            
+            let colorAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
+            colorAnimation.values = cgColors
+            colorAnimation.duration = 3
+            colorAnimation.repeatCount = .infinity
+            colorAnimation.autoreverses = true
+            dot.add(colorAnimation, forKey: "colorAnimation")
+            
+        }
+
     }
     
     func getPath() -> CGPath {
         let radius: CGFloat = baseSize.width / 3
-        let p = CGPathCreateMutable()
+        let center : CGPoint = CGPoint(x: (baseSize.width) / 2, y: (baseSize.height) / 2)
+        let p = CGMutablePath()
         
-        CGPathAddArc(p, nil, (baseSize.width) / 2, (baseSize.height) / 2, radius, CGFloat(-M_PI_2), CGFloat(M_PI_2 * 3), false)
+        p.addArc(center: center , radius: radius, startAngle: -CGFloat.pi*2, endAngle: CGFloat.pi*2*3, clockwise: false)
         return p
     }
 }

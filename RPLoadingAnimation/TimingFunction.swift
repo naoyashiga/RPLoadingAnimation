@@ -9,76 +9,76 @@
 import UIKit
 
 enum TimingFunction{
-    case Linear,EaseIn,EaseOut,EaseInOut,
-    Spring,
-    EaseInSine,EaseOutSine,EaseInOutSine,
-    EaseInQuad,EaseOutQuad,EaseInOutQuad,
-    EaseInCubic,EaseOutCubic,EaseInOutCubic,
-    EaseInQuart,EaseOutQuart,EaseInOutQuart,
-    EaseInQuint,EaseOutQuint,EaseInOutQuint,
-    EaseInExpo,EaseOutExpo,EaseInOutExpo,
-    EaseInCirc,EaseOutCirc,EaseInOutCirc,
-    EaseInBack,EaseOutBack,EaseInOutBack
+    case linear,easeIn,easeOut,easeInOut,
+    spring,
+    easeInSine,easeOutSine,easeInOutSine,
+    easeInQuad,easeOutQuad,easeInOutQuad,
+    easeInCubic,easeOutCubic,easeInOutCubic,
+    easeInQuart,easeOutQuart,easeInOutQuart,
+    easeInQuint,easeOutQuint,easeInOutQuint,
+    easeInExpo,easeOutExpo,easeInOutExpo,
+    easeInCirc,easeOutCirc,easeInOutCirc,
+    easeInBack,easeOutBack,easeInOutBack
     
     func getTimingFunction() -> CAMediaTimingFunction {
         switch self {
-        case .Linear:
+        case .linear:
             return CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        case .EaseIn:
+        case .easeIn:
             return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
-        case .EaseOut:
+        case .easeOut:
             return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
-        case .EaseInOut:
+        case .easeInOut:
             return CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        case .Spring:
+        case .spring:
             return CAMediaTimingFunction(controlPoints: 0.5, 1.1+Float(1/3), 1, 1)
-        case .EaseInSine:
+        case .easeInSine:
             return CAMediaTimingFunction(controlPoints: 0.47, 0, 0.745, 0.715)
-        case .EaseOutSine:
+        case .easeOutSine:
             return CAMediaTimingFunction(controlPoints: 0.39, 0.575, 0.565, 1)
-        case .EaseInOutSine:
+        case .easeInOutSine:
             return CAMediaTimingFunction(controlPoints: 0.445, 0.05, 0.55, 0.95)
-        case .EaseInQuad:
+        case .easeInQuad:
             return CAMediaTimingFunction(controlPoints: 0.55, 0.085, 0.68, 0.53)
-        case .EaseOutQuad:
+        case .easeOutQuad:
             return CAMediaTimingFunction(controlPoints: 0.25, 0.46, 0.45, 0.94)
-        case .EaseInOutQuad:
+        case .easeInOutQuad:
             return CAMediaTimingFunction(controlPoints: 0.455, 0.03, 0.515, 0.955)
-        case .EaseInCubic:
+        case .easeInCubic:
             return CAMediaTimingFunction(controlPoints: 0.55, 0.055, 0.675, 0.19)
-        case .EaseOutCubic:
+        case .easeOutCubic:
             return CAMediaTimingFunction(controlPoints: 0.215, 0.61, 0.355, 1)
-        case .EaseInOutCubic:
+        case .easeInOutCubic:
             return CAMediaTimingFunction(controlPoints: 0.645, 0.045, 0.355, 1)
-        case .EaseInQuart:
+        case .easeInQuart:
             return CAMediaTimingFunction(controlPoints: 0.895, 0.03, 0.685, 0.22)
-        case .EaseOutQuart:
+        case .easeOutQuart:
             return CAMediaTimingFunction(controlPoints: 0.165, 0.84, 0.44, 1)
-        case .EaseInOutQuart:
+        case .easeInOutQuart:
             return CAMediaTimingFunction(controlPoints: 0.77, 0, 0.175, 1)
-        case .EaseInQuint:
+        case .easeInQuint:
             return CAMediaTimingFunction(controlPoints: 0.755, 0.05, 0.855, 0.06)
-        case .EaseOutQuint:
+        case .easeOutQuint:
             return CAMediaTimingFunction(controlPoints: 0.23, 1, 0.32, 1)
-        case .EaseInOutQuint:
+        case .easeInOutQuint:
             return CAMediaTimingFunction(controlPoints: 0.86, 0, 0.07, 1)
-        case .EaseInExpo:
+        case .easeInExpo:
             return CAMediaTimingFunction(controlPoints: 0.95, 0.05, 0.795, 0.035)
-        case .EaseOutExpo:
+        case .easeOutExpo:
             return CAMediaTimingFunction(controlPoints: 0.19, 1, 0.22, 1)
-        case .EaseInOutExpo:
+        case .easeInOutExpo:
             return CAMediaTimingFunction(controlPoints: 1, 0, 0, 1)
-        case .EaseInCirc:
+        case .easeInCirc:
             return CAMediaTimingFunction(controlPoints: 0.6, 0.04, 0.98, 0.335)
-        case .EaseOutCirc:
+        case .easeOutCirc:
             return CAMediaTimingFunction(controlPoints: 0.075, 0.82, 0.165, 1)
-        case .EaseInOutCirc:
+        case .easeInOutCirc:
             return CAMediaTimingFunction(controlPoints: 0.785, 0.135, 0.15, 0.86)
-        case .EaseInBack:
+        case .easeInBack:
             return CAMediaTimingFunction(controlPoints: 0.6, -0.28, 0.735, 0.045)
-        case .EaseOutBack:
+        case .easeOutBack:
             return CAMediaTimingFunction(controlPoints: 0.175, 0.885, 0.32, 1.275)
-        case .EaseInOutBack:
+        case .easeInOutBack:
             return CAMediaTimingFunction(controlPoints: 0.68, -0.55, 0.265, 1.55)
         }
     }

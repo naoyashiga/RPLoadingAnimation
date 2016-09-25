@@ -9,5 +9,6 @@
 import UIKit
 
 protocol RPLoadingAnimationDelegate: class {
-    func setup(layer: CALayer, size: CGSize, color: UIColor)
+   func setup(_ layer: CALayer, size: CGSize, colors: [UIColor])
+   ///@objc optional func setup(_ layer: CALayer, size: CGSize, color: UIColor)
 }

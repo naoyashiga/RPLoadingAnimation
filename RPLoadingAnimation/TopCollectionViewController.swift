@@ -14,25 +14,28 @@ struct TopCollectionReuseId {
 
 class TopCollectionViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
-    private var cellWidth:CGFloat = 0.0
-    private var cellHeight:CGFloat = 0.0
+    fileprivate var cellWidth:CGFloat = 0.0
+    fileprivate var cellHeight:CGFloat = 0.0
     
     var animationTypes: [RPLoadingAnimationType] = [
-        .RotatingCircle,
-        .SpininngDot,
-        .LineScale,
-        .DotTrianglePath,
-        .DotSpinningLikeSkype,
-        .FunnyDotsA
+        .rotatingCircle,
+        .spininngDot,
+        .lineScale,
+        .dotTrianglePath,
+        .dotSpinningLikeSkype,
+        .funnyDotsA
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         cellWidth = view.bounds.width / 2
-        cellHeight = view.bounds.width / 2
+        cellHeight = view.bounds.height / 3
         
         collectionView?.applyCellNib(cellNibName: TopCollectionReuseId.cell)
+        
+        collectionView?.backgroundColor = UIColor.lightText
+        self.view.backgroundColor = UIColor.lightText
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,47 +44,49 @@ class TopCollectionViewController: UICollectionViewController, UICollectionViewD
     
     // MARK: UICollectionViewDataSource
     
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return animationTypes.count
     }
     
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(TopCollectionReuseId.cell, forIndexPath: indexPath) as! TopCollectionViewCell
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TopCollectionReuseId.cell, for: indexPath) as! TopCollectionViewCell
         
         let cellSize = cell.bounds.size
-        let animationFrame = CGRect(origin: CGPointZero, size: cellSize)
+        let animationFrame = CGRect(origin: CGPoint.zero, size: cellSize)
         
         let animationView = RPLoadingAnimationView(
             frame: animationFrame,
-            type: animationTypes[indexPath.row],
-            color: UIColor.blackColor(),
+            type: animationTypes[(indexPath as NSIndexPath).row],
+            colors: [UIColor.red,  .blue,  .orange, .purple],
             size: cellSize
         )
         
         cell.addSubview(animationView)
         animationView.setupAnimation()
         
+       
+        
         return cell
     }
     
     // MARK: UICollectionViewDelegateFlowLayout
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: cellWidth, height: cellHeight)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
 }
