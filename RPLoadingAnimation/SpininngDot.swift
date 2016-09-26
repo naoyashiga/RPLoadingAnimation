@@ -10,7 +10,7 @@ import UIKit
 
 class SpininngDot: RPLoadingAnimationDelegate {
     
-    func setup(layer: CALayer, size: CGSize, color: UIColor) {
+    func setup(_ layer: CALayer, size: CGSize, colors: [UIColor]) {
         
         let dotNum: CGFloat = 10
         let diameter: CGFloat = size.width / 10
@@ -23,7 +23,7 @@ class SpininngDot: RPLoadingAnimationDelegate {
             height: diameter
         )
         
-        dot.backgroundColor = color.CGColor
+        dot.backgroundColor = colors[0].cgColor
         dot.cornerRadius = diameter / 2
         dot.frame = frame
         
@@ -45,13 +45,33 @@ class SpininngDot: RPLoadingAnimationDelegate {
         scaleAnimation.autoreverses = true
         scaleAnimation.repeatCount = .infinity
         scaleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        dot.addAnimation(scaleAnimation, forKey: "scaleAnimation")
+        dot.add(scaleAnimation, forKey: "scaleAnimation")
         
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotationAnimation.toValue = -2.0 * M_PI
         rotationAnimation.duration = 6.0
         rotationAnimation.repeatCount = .infinity
         rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
-        replicatorLayer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
+        replicatorLayer.add(rotationAnimation, forKey: "rotationAnimation")
+        
+        if colors.count > 1 {
+            
+            var cgColors : [CGColor] = []
+            for color in colors {
+                cgColors.append(color.cgColor)
+            }
+            
+            let colorAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
+            colorAnimation.values = cgColors
+            colorAnimation.duration = 2
+            colorAnimation.repeatCount = .infinity
+            colorAnimation.autoreverses = true
+            dot.add(colorAnimation, forKey: "colorAnimation")
+            
+        }
+        
+        
+        
+        
     }
 }

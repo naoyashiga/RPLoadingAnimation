@@ -12,7 +12,7 @@ class DotTrianglePath: RPLoadingAnimationDelegate {
     var baseLayer = CALayer()
     var baseSize = CGSize(width: 0, height: 0)
     
-    func setup(layer: CALayer, size: CGSize, color: UIColor) {
+    func setup(_ layer: CALayer, size: CGSize, colors: [UIColor]) {
         
         let dotNum: CGFloat = 3
         let diameter: CGFloat = size.width / 15
@@ -30,7 +30,7 @@ class DotTrianglePath: RPLoadingAnimationDelegate {
         baseLayer = layer
         baseSize = size
         
-        dot.backgroundColor = color.CGColor
+        dot.backgroundColor = colors[0].cgColor
         dot.frame = frame
         dot.cornerRadius = diameter / 2
         
@@ -48,8 +48,25 @@ class DotTrianglePath: RPLoadingAnimationDelegate {
         moveAnimation.path = getPath()
         moveAnimation.duration = duration
         moveAnimation.repeatCount = .infinity
-        moveAnimation.timingFunction = TimingFunction.EaseInOutSine.getTimingFunction()
-        dot.addAnimation(moveAnimation, forKey: "moveAnimation")
+        moveAnimation.timingFunction = TimingFunction.easeInOutSine.getTimingFunction()
+        dot.add(moveAnimation, forKey: "moveAnimation")
+        
+        if colors.count > 1 {
+            
+            var cgColors : [CGColor] = []
+            for color in colors {
+                cgColors.append(color.cgColor)
+            }
+            
+            let colorAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
+            colorAnimation.values = cgColors
+            colorAnimation.duration = 2
+            colorAnimation.repeatCount = .infinity
+            colorAnimation.autoreverses = true
+            dot.add(colorAnimation, forKey: "colorAnimation")
+            
+        }
+        
     }
     
     func getPath() -> CGPath {
@@ -57,11 +74,11 @@ class DotTrianglePath: RPLoadingAnimationDelegate {
         let center = CGPoint(x: baseLayer.bounds.width / 2, y: baseLayer.bounds.height / 2)
         let path = UIBezierPath()
         
-        path.moveToPoint(CGPointMake(center.x, -r))
-        path.addLineToPoint(CGPointMake(center.x - r, r / 2))
-        path.addLineToPoint(CGPointMake(center.x + r, r / 2))
-        path.closePath()
+        path.move(to: CGPoint(x: center.x, y: -r))
+        path.addLine(to: CGPoint(x: center.x - r, y: r / 2))
+        path.addLine(to: CGPoint(x: center.x + r, y: r / 2))
+        path.close()
         
-        return path.CGPath
+        return path.cgPath
     }
 }

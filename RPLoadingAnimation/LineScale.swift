@@ -10,7 +10,7 @@ import UIKit
 
 class LineScale: RPLoadingAnimationDelegate {
     
-    func setup(layer: CALayer, size: CGSize, color: UIColor) {
+    func setup(_ layer: CALayer, size: CGSize, colors: [UIColor]) {
         
         let lineNum: CGFloat = 4
         let lineSize: CGSize = CGSize(width: size.width / 10, height: size.height / 2.5)
@@ -24,7 +24,7 @@ class LineScale: RPLoadingAnimationDelegate {
             height: lineSize.height
         )
         
-        line.backgroundColor = color.CGColor
+        line.backgroundColor = colors[0].cgColor
         line.frame = frame
         line.cornerRadius = lineSize.width / 2
         
@@ -44,7 +44,24 @@ class LineScale: RPLoadingAnimationDelegate {
         scaleAnimation.duration = duration
         scaleAnimation.autoreverses = true
         scaleAnimation.repeatCount = .infinity
-        scaleAnimation.timingFunction = TimingFunction.EaseInOutCubic.getTimingFunction()
-        line.addAnimation(scaleAnimation, forKey: "scaleAnimation")
+        scaleAnimation.timingFunction = TimingFunction.easeInOutCubic.getTimingFunction()
+        line.add(scaleAnimation, forKey: "scaleAnimation")
+        
+        if colors.count > 1 {
+            
+            var cgColors : [CGColor] = []
+            for color in colors {
+                cgColors.append(color.cgColor)
+            }
+            
+            let colorAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
+            colorAnimation.values = cgColors
+            colorAnimation.duration = 2
+            colorAnimation.repeatCount = .infinity
+            colorAnimation.autoreverses = true
+            line.add(colorAnimation, forKey: "colorAnimation")
+            
+        }
+
     }
 }

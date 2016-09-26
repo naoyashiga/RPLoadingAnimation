@@ -10,7 +10,7 @@ import UIKit
 
 class RotatingCircle: RPLoadingAnimationDelegate {
     
-    func setup(layer: CALayer, size: CGSize, color: UIColor) {
+    func setup(_ layer: CALayer, size: CGSize, colors: [UIColor]) {
         
         let dotNum: CGFloat = 4
         let diameter: CGFloat = size.width / 10
@@ -23,7 +23,7 @@ class RotatingCircle: RPLoadingAnimationDelegate {
             height: diameter
         )
         
-        circle.backgroundColor = color.CGColor
+        circle.backgroundColor = colors[0].cgColor
         circle.cornerRadius = diameter / 2
         circle.frame = frame
         
@@ -41,7 +41,7 @@ class RotatingCircle: RPLoadingAnimationDelegate {
         animation.autoreverses = true
         animation.repeatCount = .infinity
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        circle.addAnimation(animation, forKey: "animation")
+        circle.add(animation, forKey: "animation")
         
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
         scaleAnimation.toValue = 0.8
@@ -49,14 +49,32 @@ class RotatingCircle: RPLoadingAnimationDelegate {
         scaleAnimation.autoreverses = true
         scaleAnimation.repeatCount = .infinity
         scaleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        circle.addAnimation(scaleAnimation, forKey: "scaleAnimation")
+        circle.add(scaleAnimation, forKey: "scaleAnimation")
         
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotationAnimation.toValue = -2.0 * M_PI
         rotationAnimation.duration = 6.0
         rotationAnimation.repeatCount = .infinity
         rotationAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        replicatorLayer.addAnimation(rotationAnimation, forKey: "rotationAnimation")
+        replicatorLayer.add(rotationAnimation, forKey: "rotationAnimation")
+        
+        
+        if colors.count > 1 {
+        
+            var cgColors : [CGColor] = []
+            for color in colors {
+                cgColors.append(color.cgColor)
+            }
+            
+            let colorAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
+            colorAnimation.values = cgColors
+            colorAnimation.duration = 2
+            colorAnimation.repeatCount = .infinity
+            colorAnimation.autoreverses = true
+            circle.add(colorAnimation, forKey: "colorAnimation")
+        }
+        
+        
         
         replicatorLayer.instanceDelay = 0.1
         

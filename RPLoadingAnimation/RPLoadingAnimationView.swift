@@ -9,48 +9,48 @@
 import UIKit
 
 public enum RPLoadingAnimationType {
-    case RotatingCircle, SpininngDot, LineScale, DotTrianglePath,
-    DotSpinningLikeSkype, FunnyDotsA
+    case rotatingCircle, spininngDot, lineScale, dotTrianglePath,
+    dotSpinningLikeSkype, funnyDotsA
 }
 
 class AnimationFactory {
-    class func animationForType(type: RPLoadingAnimationType) -> RPLoadingAnimationDelegate {
+    class func animationForType(_ type: RPLoadingAnimationType) -> RPLoadingAnimationDelegate {
         switch type {
-        case .RotatingCircle:
+        case .rotatingCircle:
             return RotatingCircle()
-        case .SpininngDot:
+        case .spininngDot:
             return SpininngDot()
-        case .LineScale:
+        case .lineScale:
             return LineScale()
-        case .DotTrianglePath:
+        case .dotTrianglePath:
             return DotTrianglePath()
-        case .DotSpinningLikeSkype:
+        case .dotSpinningLikeSkype:
             return DotSpinningLikeSkype()
-        case .FunnyDotsA:
+        case .funnyDotsA:
             return FunnyDotsA()
         }
     }
 }
 
-public class RPLoadingAnimationView: UIView {
-    private static let defaultType = RPLoadingAnimationType.RotatingCircle
-    private static let defaultColor = UIColor.blackColor()
-    private static let defaultSize = CGSize(width: 40, height: 40)
+open class RPLoadingAnimationView: UIView {
+    fileprivate static let defaultType = RPLoadingAnimationType.rotatingCircle
+    fileprivate static let defaultColors = [UIColor.black]
+    fileprivate static let defaultSize = CGSize(width: 40, height: 40)
     
-    private var type: RPLoadingAnimationType
-    private var color: UIColor
-    private var size: CGSize
+    fileprivate var type: RPLoadingAnimationType
+    fileprivate var colors: [UIColor]
+    fileprivate var size: CGSize
     
     required public init?(coder aDecoder: NSCoder) {
         self.type = RPLoadingAnimationView.defaultType
-        self.color = RPLoadingAnimationView.defaultColor
+        self.colors = RPLoadingAnimationView.defaultColors
         self.size = RPLoadingAnimationView.defaultSize
         super.init(coder: aDecoder)
     }
     
-    init(frame: CGRect, type: RPLoadingAnimationType = defaultType, color: UIColor = defaultColor, size: CGSize = defaultSize) {
+    init(frame: CGRect, type: RPLoadingAnimationType = defaultType, colors: [UIColor] = defaultColors, size: CGSize = defaultSize) {
         self.type = type
-        self.color = color
+        self.colors = colors
         self.size = size
         super.init(frame: frame)
     }
@@ -58,6 +58,6 @@ public class RPLoadingAnimationView: UIView {
     func setupAnimation() {
         let animation = AnimationFactory.animationForType(type)
         layer.sublayers = nil
-        animation.setup(layer, size: size, color: color)
+        animation.setup(layer, size: size, colors: colors)
     }
 }

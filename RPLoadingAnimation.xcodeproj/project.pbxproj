@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A1F29DC1BCE8BE900CFDB72 /* FunnyDotsA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F29DB1BCE8BE900CFDB72 /* FunnyDotsA.swift */; settings = {ASSET_TAGS = (); }; };
+		9A1F29DC1BCE8BE900CFDB72 /* FunnyDotsA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1F29DB1BCE8BE900CFDB72 /* FunnyDotsA.swift */; };
 		9A4E99231BCA3EE600736FB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99221BCA3EE600736FB3 /* AppDelegate.swift */; };
 		9A4E99281BCA3EE600736FB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E99261BCA3EE600736FB3 /* Main.storyboard */; };
 		9A4E992A1BCA3EE600736FB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E99291BCA3EE600736FB3 /* Assets.xcassets */; };
 		9A4E992D1BCA3EE600736FB3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A4E992B1BCA3EE600736FB3 /* LaunchScreen.storyboard */; };
 		9A4E99381BCA3EE600736FB3 /* RPLoadingAnimationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99371BCA3EE600736FB3 /* RPLoadingAnimationTests.swift */; };
 		9A4E99431BCA3EE600736FB3 /* RPLoadingAnimationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99421BCA3EE600736FB3 /* RPLoadingAnimationUITests.swift */; };
-		9A4E99541BCA532B00736FB3 /* RotatingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */; settings = {ASSET_TAGS = (); }; };
-		9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */; settings = {ASSET_TAGS = (); }; };
-		9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */; settings = {ASSET_TAGS = (); }; };
-		9ABB20731BCD2ABA002D42A6 /* TopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB20721BCD2ABA002D42A6 /* TopCollectionViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		9ABB20771BCD2B10002D42A6 /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB20751BCD2B10002D42A6 /* TopCollectionViewCell.swift */; settings = {ASSET_TAGS = (); }; };
-		9ABB20781BCD2B10002D42A6 /* TopCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ABB20761BCD2B10002D42A6 /* TopCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
-		9ABB207B1BCD2BA6002D42A6 /* UICollectionView+RPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB207A1BCD2BA6002D42A6 /* UICollectionView+RPExtension.swift */; settings = {ASSET_TAGS = (); }; };
-		9AE4EB601BCB3FCC005BD9D9 /* SpininngDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB5F1BCB3FCC005BD9D9 /* SpininngDot.swift */; settings = {ASSET_TAGS = (); }; };
-		9AE4EB621BCB6760005BD9D9 /* LineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB611BCB6760005BD9D9 /* LineScale.swift */; settings = {ASSET_TAGS = (); }; };
-		9AE4EB651BCBA90A005BD9D9 /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */; settings = {ASSET_TAGS = (); }; };
-		9AE4EB671BCBAD67005BD9D9 /* DotTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB661BCBAD67005BD9D9 /* DotTrianglePath.swift */; settings = {ASSET_TAGS = (); }; };
-		9AE4EB691BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB681BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift */; settings = {ASSET_TAGS = (); }; };
+		9A4E99541BCA532B00736FB3 /* RotatingCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99531BCA532B00736FB3 /* RotatingCircle.swift */; };
+		9A4E99581BCA57F100736FB3 /* RPLoadingAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99571BCA57F100736FB3 /* RPLoadingAnimationView.swift */; };
+		9A4E995A1BCA586400736FB3 /* RPLoadingAnimationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4E99591BCA586400736FB3 /* RPLoadingAnimationDelegate.swift */; };
+		9ABB20731BCD2ABA002D42A6 /* TopCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB20721BCD2ABA002D42A6 /* TopCollectionViewController.swift */; };
+		9ABB20771BCD2B10002D42A6 /* TopCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB20751BCD2B10002D42A6 /* TopCollectionViewCell.swift */; };
+		9ABB20781BCD2B10002D42A6 /* TopCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9ABB20761BCD2B10002D42A6 /* TopCollectionViewCell.xib */; };
+		9ABB207B1BCD2BA6002D42A6 /* UICollectionView+RPExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABB207A1BCD2BA6002D42A6 /* UICollectionView+RPExtension.swift */; };
+		9AE4EB601BCB3FCC005BD9D9 /* SpininngDot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB5F1BCB3FCC005BD9D9 /* SpininngDot.swift */; };
+		9AE4EB621BCB6760005BD9D9 /* LineScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB611BCB6760005BD9D9 /* LineScale.swift */; };
+		9AE4EB651BCBA90A005BD9D9 /* TimingFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB641BCBA90A005BD9D9 /* TimingFunction.swift */; };
+		9AE4EB671BCBAD67005BD9D9 /* DotTrianglePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB661BCBAD67005BD9D9 /* DotTrianglePath.swift */; };
+		9AE4EB691BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE4EB681BCBC1C5005BD9D9 /* DotSpinningLikeSkype.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -284,14 +284,17 @@
 				TargetAttributes = {
 					9A4E991E1BCA3EE600736FB3 = {
 						CreatedOnToolsVersion = 7.0;
-						DevelopmentTeam = S8GGSYBVK5;
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					9A4E99321BCA3EE600736FB3 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = 9A4E991E1BCA3EE600736FB3;
 					};
 					9A4E993D1BCA3EE600736FB3 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = 9A4E991E1BCA3EE600736FB3;
 					};
 				};
@@ -452,7 +455,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -490,7 +493,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -503,12 +506,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RPLoadingAnimation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.RPLoadingAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -518,12 +523,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = RPLoadingAnimation/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.RPLoadingAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -535,6 +542,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.RPLoadingAnimationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPLoadingAnimation.app/RPLoadingAnimation";
 			};
 			name = Debug;
@@ -547,6 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.RPLoadingAnimationTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPLoadingAnimation.app/RPLoadingAnimation";
 			};
 			name = Release;
@@ -558,6 +567,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.RPLoadingAnimationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = RPLoadingAnimation;
 				USES_XCTRUNNER = YES;
 			};
@@ -570,6 +580,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.naoyashiga.RPLoadingAnimationUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = RPLoadingAnimation;
 				USES_XCTRUNNER = YES;
 			};

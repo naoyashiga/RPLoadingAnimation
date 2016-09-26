@@ -12,7 +12,7 @@ class DotSpinningLikeSkype: RPLoadingAnimationDelegate {
     var baseLayer = CALayer()
     var baseSize = CGSize(width: 0, height: 0)
     
-    func setup(layer: CALayer, size: CGSize, color: UIColor) {
+    func setup(_ layer: CALayer, size: CGSize, colors: [UIColor]) {
         
         let dotNum: CGFloat = 8
         let diameter: CGFloat = size.width / 16
@@ -29,7 +29,7 @@ class DotSpinningLikeSkype: RPLoadingAnimationDelegate {
         baseLayer = layer
         baseSize = size
         
-        dot.backgroundColor = color.CGColor
+        dot.backgroundColor = colors[0].cgColor
         dot.cornerRadius = diameter / 2
         dot.frame = frame
         
@@ -50,7 +50,7 @@ class DotSpinningLikeSkype: RPLoadingAnimationDelegate {
         scaleAnimation.autoreverses = true
         scaleAnimation.repeatCount = .infinity
         scaleAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        dot.addAnimation(scaleAnimation, forKey: "scaleAnimation")
+        dot.add(scaleAnimation, forKey: "scaleAnimation")
         
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotationAnimation.toValue = -2.0 * M_PI
@@ -65,17 +65,36 @@ class DotSpinningLikeSkype: RPLoadingAnimationDelegate {
         moveAnimation.path = getPath()
         moveAnimation.duration = duration
         moveAnimation.repeatCount = .infinity
-        moveAnimation.timingFunction = TimingFunction.EaseInOutCirc.getTimingFunction()
-        dot.addAnimation(moveAnimation, forKey: "moveAnimation")
+        moveAnimation.timingFunction = TimingFunction.easeInOutCirc.getTimingFunction()
+        dot.add(moveAnimation, forKey: "moveAnimation")
         
         layer.transform = CATransform3DMakeRotation(CGFloat(M_PI) / 2, 0, 0, 0)
+        
+        
+        if colors.count > 1 {
+            
+            var cgColors : [CGColor] = []
+            for color in colors {
+                cgColors.append(color.cgColor)
+            }
+            
+            let colorAnimation = CAKeyframeAnimation(keyPath: "backgroundColor")
+            colorAnimation.values = cgColors
+            colorAnimation.duration = 3
+            colorAnimation.repeatCount = .infinity
+            colorAnimation.autoreverses = true
+            dot.add(colorAnimation, forKey: "colorAnimation")
+            
+        }
+
+        
     }
     
     func getPath() -> CGPath {
         let radius: CGFloat = baseSize.width / 3
-        let p = CGPathCreateMutable()
-        
-        CGPathAddArc(p, nil, (baseSize.width) / 2, (baseSize.height) / 2, radius, CGFloat(-M_PI_2), CGFloat(M_PI_2 * 3), false)
+        let center : CGPoint = CGPoint(x: (baseSize.width) / 2, y: (baseSize.height) / 2)
+        let p = CGMutablePath()
+        p.addArc(center: center , radius: radius, startAngle: -CGFloat.pi*2, endAngle: CGFloat.pi*2*3, clockwise: false)
         return p
     }
 }
